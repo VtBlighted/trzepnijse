@@ -9,10 +9,26 @@ img {
   margin-right: auto;
 }
 </style>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 </head>
 <body style="background-color:#333333;">
 
 <img src="tse.png" class="center">
+  
+<button id="target" type="button" class="center">Ale do czego?</button>
+
+<p id="result" class="center"></p>
+  
+<script>
+
+const kto = ["potężny włamywacz", "dwóch mężczyzn", "stary koleś", "ambitna dziennikarka", "zjarany ziomuś", "azjatka", "latino", "prawiczek", "gej", "dwóch gejów", "dziewczyna ze wsi", "milf", "panna młoda"];
+const co = ["robią to", "produkują płyny", "penetrują się", "liżą się", "organizują orgię", "masują się"];
+const gdzie = ["na kolanach", "w pupę", "publicznie", "bez opamiętania", "bez zabezpieczenia", "na jego oczach", "w lesie", "w samochodzie", "w biurze", "we wszystkie dziury", "w taksówce", "na wakacjach", "na kawalerskim"];
+
+$( "#target" ).click(function() {
+  $("#result").text(kto[Math.floor(Math.random()*kto.length)] + " i " + kto[Math.floor(Math.random()*kto.length)] + " " + co[Math.floor(Math.random()*co.length)] + " " + gdzie[Math.floor(Math.random()*gdzie.length)]);
+});
+</script>
 
 </body>
 </html>
